@@ -1,0 +1,36 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #222222;
+;
+}
+#network{
+	color: #B213A6;
+}
+#cpu{
+	color: #c6d461;
+}
+#memory{
+	color: #1AB213;
+}
+#temperature{
+	color: #B21332;
+}
+#time {
+  color: #ffb86c;
+}
+#backlight{
+	color:#39ccc0;
+}
+#pulseaudio{
+	color:#23B043;
+}
+#mpris{
+	color:#03fc84;
+}
+#battery {
+  color: #8be9fd;
+	padding-right:10px;
+}
+

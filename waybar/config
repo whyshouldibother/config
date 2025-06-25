@@ -1,0 +1,49 @@
+{
+"reload_style_on_change":true,
+"layer":"top",
+"position":"top",
+"spacing":"6px",
+"modules-left":["network","custom/spacer","cpu","memory","temperature"],
+"modules-center":["clock"],
+"modules-right":["mpris","pulseaudio","custom/spacer","backlight","custom/spacer","battery"],
+"network":{
+	"format-wifi":"{essid}({signalStrength}%) ",
+	"format-ethernet":"Wired",
+	"tooltip-format":"{ifname} via {gwaddr}",
+	"format-disconnected":"NoNetwork"
+},
+"clock":{
+	"format":"{:%a %d %b %I:%M %p}",
+},
+"cpu":{
+	"format":" {usage}% ",
+},
+"memory":{
+	"format": " {percentage}% ",
+},
+"temperature": {
+	"critical-threshold":80,
+	"format":"🌡 {temperatureC}° "
+},
+"backlight":{
+	 "device": "intel_backlight",
+    "format": "{percent}% {icon} ",
+    "format-icons": ["", ""]
+},
+"mpris":{
+	"format":"{title} ",
+	"max-length":30,
+},
+"pulseaudio":{
+	"format":"{volume}% 🎧",
+	"format-bluetooth": "{volume}%",
+	"on-click":"pavucontrol"
+},
+"battery":{
+"format":"{capacity}% {icon}",
+"format-icons": ["", "", "", "", ""]
+},
+"custom/spacer":{
+	"format":" "
+}
+}
