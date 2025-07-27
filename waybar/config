@@ -46,7 +46,7 @@
       "format-wifi": " {signalStrength}% ",
       "format-ethernet": "LAN",
       "tooltip-format-wifi": "{essid}\n{gwaddr}",
-      "tooltip-format-ethernet":"{gwaddr}"
+      "tooltip-format-ethernet":"{gwaddr}",
       "format-disconnected": "NoNetwork"
     },
     "clock": {
