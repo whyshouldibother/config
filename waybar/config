@@ -45,7 +45,7 @@
     "network": {
       "format-wifi": " {signalStrength}% ",
       "format-ethernet": "LAN",
-      "tooltip-format-wifi": "{essid}\n{gwaddr}",
+      "tooltip-format-wifi": "{essid}\n{gwaddr}\n↓{bandwidthDownBytes}↑{bandwidthUpBytes}",
       "tooltip-format-ethernet":"{gwaddr}",
       "format-disconnected": "NoNetwork"
     },
@@ -98,7 +98,8 @@
         "",
         "",
         ""
-      ]
+      ],
+      "format-charging":"{capacity}% 🗲",
     },
     "custom/spacer": {
       "format": " "

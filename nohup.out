@@ -6,3 +6,4 @@
 [2025-07-27 09:04:56.838] [warning] 'swap-icon-label' must be a bool.
 [2025-07-27 09:04:57.133] [info] Bar configured (width: 1920, height: 35) for output: eDP-1
 [2025-07-27 09:04:57.133] [error] Item '': No icon name or pixmap given.
+Gdk-Message: 09:05:20.248: Error reading events from display: Broken pipe
