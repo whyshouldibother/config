@@ -7,7 +7,6 @@
     "output": "eDP-1",
     "modules-left": [
       "network",
-      "custom/spacer",
       "cpu",
       "memory",
       "temperature",
@@ -43,7 +42,7 @@
       "separate-outputs": true
     },
     "network": {
-      "format-wifi": " {signalStrength}% ",
+      "format-wifi": " {signalStrength}%",
       "format-ethernet": "LAN",
       "tooltip-format-wifi": "{essid}\n↓\t{bandwidthDownBytes}\n↑\t{bandwidthUpBytes}",
       "tooltip-format-ethernet":"↓\t{bandwidthDownBytes}\n↑\t{bandwidthUpBytes}",
@@ -54,14 +53,14 @@
       "format": "{:%a %d %b %I:%M %p} "
     },
     "cpu": {
-      "format": " {usage}% "
+      "format": "{usage:>3}% "
     },
     "memory": {
-      "format": " {percentage}% "
+      "format": "{used:>3}"
     },
     "temperature": {
       "critical-threshold": 80,
-      "format": "🌡 {temperatureC}° "
+      "format": "{temperatureC:>3}C"
     },
     "backlight": {
       "device": "intel_backlight",

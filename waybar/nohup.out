@@ -1,0 +1,16 @@
+[2025-07-27 18:05:27.360] [info] Using configuration file /home/cat/.config/waybar/config
+[2025-07-27 18:05:27.364] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2025-07-27 18:05:27.396] [info] Using CSS file /home/cat/.config/waybar/style.css
+[2025-07-27 18:05:27.414] [info] Hyprland IPC starting
+[2025-07-27 18:05:27.415] [info] Loading persistent workspaces from Hyprland workspace rules
+[2025-07-27 18:05:27.416] [warning] 'swap-icon-label' must be a bool.
+Fontconfig warning: using without calling FcInit()
+[2025-07-27 18:05:27.690] [info] Bar configured (width: 1920, height: 35) for output: eDP-1
+[2025-07-27 18:05:38.308] [info] Using configuration file /home/cat/.config/waybar/config
+[2025-07-27 18:05:38.313] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2025-07-27 18:05:38.313] [info] Using CSS file /home/cat/.config/waybar/style.css
+[2025-07-27 18:05:38.331] [info] Hyprland IPC starting
+[2025-07-27 18:05:38.332] [info] Loading persistent workspaces from Hyprland workspace rules
+[2025-07-27 18:05:38.333] [warning] 'swap-icon-label' must be a bool.
+Fontconfig warning: using without calling FcInit()
+[2025-07-27 18:05:38.585] [info] Bar configured (width: 1920, height: 35) for output: eDP-1
