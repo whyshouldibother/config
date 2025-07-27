@@ -1,49 +1,148 @@
-{
-"reload_style_on_change":true,
-"layer":"top",
-"position":"top",
-"spacing":"6px",
-"modules-left":["network","custom/spacer","cpu","memory","temperature"],
-"modules-center":["clock"],
-"modules-right":["mpris","pulseaudio","custom/spacer","backlight","custom/spacer","battery"],
-"network":{
-	"format-wifi":"{essid}({signalStrength}%) ",
-	"format-ethernet":"Wired",
-	"tooltip-format":"{ifname} via {gwaddr}",
-	"format-disconnected":"NoNetwork"
-},
-"clock":{
-	"format":"{:%a %d %b %I:%M %p}",
-},
-"cpu":{
-	"format":" {usage}% ",
-},
-"memory":{
-	"format": " {percentage}% ",
-},
-"temperature": {
-	"critical-threshold":80,
-	"format":"🌡 {temperatureC}° "
-},
-"backlight":{
-	 "device": "intel_backlight",
-    "format": "{percent}% {icon} ",
-    "format-icons": ["", ""]
-},
-"mpris":{
-	"format":"{title} ",
-	"max-length":30,
-},
-"pulseaudio":{
-	"format":"{volume}% 🎧",
-	"format-bluetooth": "{volume}%",
-	"on-click":"pavucontrol"
-},
-"battery":{
-"format":"{capacity}% {icon}",
-"format-icons": ["", "", "", "", ""]
-},
-"custom/spacer":{
-	"format":" "
-}
-}
+[
+  {
+    "reload_style_on_change": true,
+    "layer": "top",
+    "position": "top",
+    "spacing": "6px",
+    "output": "eDP-1",
+    "modules-left": [
+      "network",
+      "custom/spacer",
+      "cpu",
+      "memory",
+      "temperature",
+      "clock",
+      "hyprland/workspaces",
+      "wlr/taskbar"
+    ],
+    "modules-center": [
+      "hyprland/window"
+    ],
+    "modules-right": [
+      "mpris",
+      "tray",
+      "pulseaudio",
+      "custom/spacer",
+      "backlight",
+      "custom/spacer",
+      "battery"
+    ],
+    "wlr/taskbar": {
+      "on-click": "minimize-raise"
+    },
+    "hyprland/workspaces": {
+      "format": "{name}",
+      "all-outputs": true,
+      "on-click": "hyprctl dispatch workspace {name}",
+      "on-scroll-up": "hyprctl dispatch workspace e+1",
+      "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+    "hyprland/window": {
+      "format": "{initialClass}",
+      "icon": true,
+      "separate-outputs": true
+    },
+    "network": {
+      "format-wifi": " {signalStrength}% ",
+      "format-ethernet": "LAN",
+      "tooltip-format-wifi": "{essid}\n{gwaddr}",
+      "tooltip-format-ethernet":"{gwaddr}"
+      "format-disconnected": "NoNetwork"
+    },
+    "clock": {
+      "format": "{:%a %d %b %I:%M %p}"
+    },
+    "cpu": {
+      "format": " {usage}% "
+    },
+    "memory": {
+      "format": " {percentage}% "
+    },
+    "temperature": {
+      "critical-threshold": 80,
+      "format": "🌡 {temperatureC}° "
+    },
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "{percent}% {icon} ",
+      "format-icons": [
+        "",
+        ""
+      ]
+    },
+    "tray": {
+      "format": "{tray} ",
+      "icon-size": 16,
+      "spacing": 10
+    },
+    "mpris": {
+      "format": "{title} ",
+      "on-click": "playerctl play-pause",
+      "on-click-right": "playerctl next",
+      "on-scroll-up": "playerctl volume 10-",
+      "on-scroll-down": "playerctl volume 10+",
+      "on-click-middle": "playerctl position 10+",
+      "max-length": 30
+    },
+    "pulseaudio": {
+      "format": "{volume}% 🎧",
+      "format-bluetooth": "{volume}%",
+      "on-click": "pavucontrol",
+      "on-click-right": "pamixer -t"
+    },
+    "battery": {
+      "format": "{capacity}% {icon}",
+      "format-icons": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "custom/spacer": {
+      "format": " "
+    }
+  },
+  {
+    "reload_style_on_change": true,
+    "layer": "top",
+    "position": "top",
+    "spacing": "6px",
+    "output": "HDMI-A-1",
+    "modules-left": [
+      "clock",
+      "hyprland/workspaces",
+      "wlr/taskbar"
+    ],
+    "modules-center": [
+      "hyprland/window"
+    ],
+    "modules-right": [
+      "mpris"
+    ],
+    "clock": {
+      "format": "{:%a %d %b %I:%M %p}"
+    },
+    "mpris": {
+      "format": "{title} ",
+      "on-click": "playerctl play-pause",
+      "on-click-right": "playerctl next",
+      "on-scroll-up": "playerctl volume 10-",
+      "on-scroll-down": "playerctl volume 10+",
+      "on-click-middle": "playerctl position 10+",
+      "max-length": 50
+    },
+    "hyprland/workspaces": {
+      "all-outputs": true
+    },
+    "hyprland/window": {
+      "format": "{initialClass}",
+      "icon": true,
+      "separate-outputs": true
+    },
+    "wlr/taskbar": {
+      "on-click": "minimize-raise"
+    }
+  }
+]

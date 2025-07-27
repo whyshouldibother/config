@@ -3,6 +3,7 @@
   font-size: 18px;
   color: #ffffff;
   background-color: #222222;
+  min-height: 10px;
 ;
 }
 #network{
@@ -26,6 +27,9 @@
 #pulseaudio{
 	color:#23B043;
 }
+#tray{
+    padding-right: 10px;
+}
 #mpris{
 	color:#03fc84;
 }
@@ -33,4 +37,6 @@
   color: #8be9fd;
 	padding-right:10px;
 }
-
+#clock{
+	color: #82109e;
+}
