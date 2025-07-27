@@ -11,7 +11,6 @@
       "cpu",
       "memory",
       "temperature",
-      "clock",
       "hyprland/workspaces",
       "wlr/taskbar"
     ],
@@ -20,6 +19,7 @@
     ],
     "modules-right": [
       "mpris",
+      "clock",
       "tray",
       "pulseaudio",
       "custom/spacer",
@@ -45,12 +45,13 @@
     "network": {
       "format-wifi": " {signalStrength}% ",
       "format-ethernet": "LAN",
-      "tooltip-format-wifi": "{essid}\n{gwaddr}\n↓{bandwidthDownBytes}↑{bandwidthUpBytes}",
-      "tooltip-format-ethernet":"{gwaddr}",
-      "format-disconnected": "NoNetwork"
+      "tooltip-format-wifi": "{essid}\n↓\t{bandwidthDownBytes}\n↑\t{bandwidthUpBytes}",
+      "tooltip-format-ethernet":"↓\t{bandwidthDownBytes}\n↑\t{bandwidthUpBytes}",
+      "format-disconnected": "404",
+      "interval":10
     },
     "clock": {
-      "format": "{:%a %d %b %I:%M %p}"
+      "format": "{:%a %d %b %I:%M %p} "
     },
     "cpu": {
       "format": " {usage}% "
@@ -64,11 +65,12 @@
     },
     "backlight": {
       "device": "intel_backlight",
-      "format": "{percent}% {icon} ",
+      "format": "{percent:>3}% {icon} ",
       "format-icons": [
         "",
         ""
-      ]
+      ],
+      "tooltip":false
     },
     "tray": {
       "format": "{tray} ",
@@ -85,13 +87,16 @@
       "max-length": 30
     },
     "pulseaudio": {
-      "format": "{volume}% 🎧",
-      "format-bluetooth": "{volume}%",
+      "format": "{volume:>3}% {icon} ",
+      "format-muted":"Muted",
+      "format-icons":["","", ""],
       "on-click": "pavucontrol",
       "on-click-right": "pamixer -t"
     },
     "battery": {
-      "format": "{capacity}% {icon}",
+        "battery":"BAT0",
+      "format": "{capacity:>3}% {icon}  ",
+      "format-charging":"{capacity:>3}% {icon} +",
       "format-icons": [
         "",
         "",
@@ -99,7 +104,7 @@
         "",
         ""
       ],
-      "format-charging":"{capacity}% 🗲",
+      "interval":10
     },
     "custom/spacer": {
       "format": " "
