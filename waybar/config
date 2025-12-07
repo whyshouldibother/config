@@ -11,13 +11,13 @@
       "memory",
       "temperature",
       "hyprland/workspaces",
-      "wlr/taskbar"
+      "wlr/taskbar",
+      "mpris",
     ],
     "modules-center": [
       "hyprland/window"
     ],
     "modules-right": [
-      "mpris",
       "clock",
       "tray",
       "pulseaudio",
@@ -43,6 +43,7 @@
     },
     "network": {
       "format-wifi": " {signalStrength}%",
+      "on-click": "kitty nmtui",
       "format-ethernet": "LAN",
       "tooltip-format-wifi": "{essid}\n↓\t{bandwidthDownBytes}\n↑\t{bandwidthUpBytes}",
       "tooltip-format-ethernet":"↓\t{bandwidthDownBytes}\n↑\t{bandwidthUpBytes}",
@@ -50,13 +51,32 @@
       "interval":10
     },
     "clock": {
-      "format": "{:%a %d %b %I:%M %p} "
+      "format": "{:%a %d %b %I:%M %p} ",
+      "tooltip-format": "<tt><small>{calendar}</small></tt>",
+      "calendar":{
+          "mode":"month",
+          "format":{
+             "months":     "<span color='#ffead3'><b>{}</b></span>",
+             "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+             "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+             "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+             "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+          }
+      },
+      "on-click-right" :"gnome-calendar",
+      "on-click": "gnome-clocks",
+      "actions":{
+          "on-scroll-down":"shift_down",
+          "on-scroll-up":"shift_up",
+      }
     },
     "cpu": {
-      "format": "{usage:>3}% "
+      "format": "{usage:>3}% ",
+      "on-click": "kitty htop"
     },
     "memory": {
-      "format": "{used:>3}"
+      "format": "{used:>3}",
+      "on-click": "kitty htop"
     },
     "temperature": {
       "critical-threshold": 80,
@@ -72,6 +92,7 @@
       "tooltip":false
     },
     "tray": {
+        "all-outputs":true,
       "format": "{tray} ",
       "icon-size": 16,
       "spacing": 10
@@ -86,8 +107,10 @@
       "max-length": 30
     },
     "pulseaudio": {
-      "format": "{volume:>3}% {icon} ",
-      "format-muted":"Muted",
+      "format": "{format_source}{volume:>3}% {icon} ",
+      "format-muted": "{format_source}{volume:>3}% 🔇",
+      "format-source":"  ",
+      "format-source-muted": "  ",
       "format-icons":["","", ""],
       "on-click": "pavucontrol",
       "on-click-right": "pamixer -t"
@@ -127,7 +150,26 @@
       "mpris"
     ],
     "clock": {
-      "format": "{:%a %d %b %I:%M %p}"
+      "format": "{:%a %d %b %I:%M %p}",
+       "format": "{:%a %d %b %I:%M %p} ",
+      "tooltip-format": "<tt><small>{calendar}</small></tt>",
+      "calendar":{
+          "mode":"month",
+          "format":{
+             "months":     "<span color='#ffead3'><b>{}</b></span>",
+             "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+             "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+             "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+             "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+          }
+      },
+      "on-click-right" :"gnome-calendar",
+      "on-click": "gnome-clocks",
+      "actions":{
+          "on-scroll-down":"shift_down",
+          "on-scroll-up":"shift_up",
+      }
+
     },
     "mpris": {
       "format": "{title} ",

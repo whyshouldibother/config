@@ -61,3 +61,13 @@ Fontconfig warning: using without calling FcInit()
 [2025-07-27 18:04:04.976] [info] Loading persistent workspaces from Hyprland workspace rules
 [2025-07-27 18:04:04.976] [warning] 'swap-icon-label' must be a bool.
 [2025-07-27 18:04:05.234] [info] Bar configured (width: 1920, height: 35) for output: eDP-1
+[2025-07-27 18:16:17.310] [info] Using configuration file /home/cat/.config/waybar/config
+[2025-07-27 18:16:17.315] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2025-07-27 18:16:17.315] [info] Using CSS file /home/cat/.config/waybar/style.css
+[2025-07-27 18:16:17.336] [info] Hyprland IPC starting
+[2025-07-27 18:16:17.337] [info] Loading persistent workspaces from Hyprland workspace rules
+[2025-07-27 18:16:17.353] [warning] 'swap-icon-label' must be a bool.
+[2025-07-27 18:16:17.650] [info] Bar configured (width: 1920, height: 35) for output: eDP-1
+MESA-INTEL: warning: ../mesa-25.1.5/src/intel/vulkan/anv_formats.c:940: FINISHME: support YUV colorspace with DRM format modifiers
+MESA-INTEL: warning: ../mesa-25.1.5/src/intel/vulkan/anv_formats.c:972: FINISHME: support more multi-planar formats with DRM modifiers
+Gdk-Message: 18:43:33.175: Error reading events from display: Connection reset by peer
